@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import HelloWorld from './components/HelloWorld';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
     <div className="App">
       <h1>Fala, {formatName}</h1>
       <h2>Soma: {sum(3,5)}</h2>
+      <HelloWorld/>
       <img src={url} alt='placeholder'/>
     </div>
   );
