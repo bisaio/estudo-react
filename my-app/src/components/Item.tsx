@@ -1,11 +1,12 @@
 interface ItemProps {
-    marca: string
+    marca?: string,
+    ano_lancamento?: number
 }
 
-export default function Item(props: ItemProps) {
+export default function Item({marca='N/A', ano_lancamento=0}: ItemProps) {
     return (
         <>
-            <li>{props.marca}</li>
+            <li>{marca} - {ano_lancamento}</li>
         </>
     )
 }
