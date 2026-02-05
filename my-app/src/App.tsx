@@ -1,8 +1,6 @@
 import './App.css';
-import SayMyName from './components/SayMyName';
-import Pessoa from './components/Pessoa';
-import Frase from './components/Frase';
-import List from './components/List';
+import EventoClick from './components/EventoClick';
+import Form from './components/Form';
 
 function App() {
 
@@ -10,11 +8,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Testando CSS</h1>
-      <Frase />
-      <SayMyName name='zé' />
-      <Pessoa name={name} age={22} profession='Programadora' image='https://placehold.co/150' />
-      <List />
+      <h1>Testando Eventos</h1>
+      <EventoClick numero={1} />
+      <EventoClick numero={2} />
+      <Form />
     </div>
   );
 }
