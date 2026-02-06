@@ -1,16 +1,20 @@
-interface EventoClickProps {
-    numero: number;
-}
+import Button from "./eventos/Button";
 
-export default function EventoClick({ numero }: EventoClickProps) {
+export default function EventoClick() {
     function meuEvento() {
-        console.log(`clique no botao: ${numero}`);
+        console.log(`primeiro evento`);
+    }
+
+    function segundoEvento() {
+        console.log("segundo evento");
+        
     }
 
     return (
         <div>
-            <p>Clique para disparar o evento do botão {numero}:</p>
-            <button onClick={meuEvento}>Ativar</button>
+            <p>Clique para disparar o evento do botão:</p>
+            <Button text="Primeiro Evento" event={meuEvento}/>
+            <Button text="Segundo Evento" event={segundoEvento}/>
         </div>
     )
 }
