@@ -1,16 +1,16 @@
 import './App.css';
-import RenderizacaoCondicional from './components/RenderizacaoCondicional';
-import RenderList from './components/RenderList';
+import SeuNome from './components/SeuNome';
+import Saudacao from './components/Saudacao';
+import { useState } from 'react';
 
 function App() {
-
-  const lista = ['React', 'Vue', 'Angular']
-
+  const [nome, setNome] = useState("")
+  
   return (
     <div className="App">
-      <h1>Renderização de Listas</h1>
-      <RenderList itens={lista}/>
-      <RenderList itens={[]}/>
+      <h1>State Lift</h1>
+      <SeuNome onChangeNome={setNome} />
+      <Saudacao nome={nome}/>
     </div>
   );
 }
